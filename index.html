@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="index.js" defer></script>
+    <script src="table.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <form class="form-inline">
+        <input class="form-control mr-sm-2"
+               type="text"
+               placeholder="Search by last name"
+               id="searchLastName"
+               onchange="searchByLastName()"
+               onkeypress="searchOnEnterKey(event)">
+
+        <button class="btn btn-success" onclick="searchByLastName()">Search </button>
+    </form>
+</nav>
+<br>
+
+<div class="container">
+    <h3>Navbar Forms</h3>
+    <p>Use the .form-inline class to align form elements side by side inside the navbar.</p>
+
+    <div>
+        <div class="form-group">
+            <label for="firstName"><b>First Name:</b></label>
+            <input type="text" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName"><b>Last Name:</b></label>
+            <input type="text" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="age"><b>Age:</b></label>
+            <input type="number" class="form-control" id="age">
+        </div>
+        <div class="float-right">
+            <button type="button" class="btn btn-outline-success" onclick="addPerson()">Success</button>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <table class="table table-dark table-hover" id="peopleTable">
+        <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
